@@ -12,15 +12,21 @@ const PORT = process.env.PORT || 4200
 //////////////////////
 // Declare Middleware
 //////////////////////
-app.use(express.urlencoded({extended: true}))
-app.use(express.json())
 app.use(cors())
 app.use(morgan("dev"))
 ///////////////////////
 // Declare Routes and Routers 
 ///////////////////////
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
-
+app.get("/", (req, res) => {
+    res.send("Welcome back....")
+})
+app.get("/projects", (req, res) => {
+    res.json(projects)
+})
+app.get("/about", (req, res) => {
+    res.json(about)
+})
 ///////////////////////////
 // Server Listener
 ///////////////////////////
