@@ -30,3 +30,4 @@ app.get("/about", (req, res) => {
 ///////////////////////////
 // Server Listener
 ///////////////////////////
+app.listen(PORT, () => console.log(`Welcome to PORT -----> ${PORT}`))
