@@ -12,7 +12,10 @@ const PORT = process.env.PORT || 4200
 //////////////////////
 // Declare Middleware
 //////////////////////
-
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(cors())
+app.use(morgan("dev"))
 ///////////////////////
 // Declare Routes and Routers 
 ///////////////////////
